@@ -29,7 +29,7 @@ Tujuan utama dari proyek analisis prediktif ini adalah untuk menjawab pertanyaan
 - Membuat model prediksi yang akurat untuk memprediksi GPA siswa berdasarkan data pendukung yang ada
 
 #### 3. Solution Statement 
-1. Memodelkan dengan K-Nearest Neighbors (KNN)**  
+1. Memodelkan dengan K-Nearest Neighbors (KNN)
    KNN akan digunakan sebagai model baseline untuk prediksi GPA siswa berdasarkan faktor-faktor seperti waktu belajar mingguan, ketidakhadiran, kegiatan ekstrakurikuler, olahraga, musik, dukungan orang tua, dan bimbingan belajar. KNN adalah algoritma yang intuitif dan mudah dipahami, namun memiliki beberapa kelemahan, seperti sensitivitas terhadap skala dan data berdimensi tinggi. Hyperparameter tuning akan dilakukan untuk menentukan jumlah tetangga terbaik (k) dan jarak metrik (misalnya, Euclidean). Metrik evaluasi yang akan digunakan adalah Mean Square Error (MSE).
    
 2. Memodelkan dengan Random Forest 
