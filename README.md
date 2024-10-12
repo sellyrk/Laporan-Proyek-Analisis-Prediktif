@@ -105,6 +105,8 @@ Dengan mempertimbangkan bahwa Random Forest memiliki MSE yang paling kecil, baik
 Kesimpulan:
 Setelah melakukan prediksi, didapat jika faktor yang dapat mempengaruhi nilai akademis siswa ada 4, yaitu bimbingan belajar, dukungan dari orang tua, dan kegiatan di luar sekolah seperti esktrakulikuler, olahraga dan juga musik. Kegiatan siswa di luar sekolah, seperti ekstrakulikuler, olahraga, musik dan menjadi volunteer memiliki dampak positif terhadap prestasi akademis siswa, karena dibuktikan jika siswa yang mengikuti kegiatan di luar sekolah, memiliki GPA yang lebih tinggi. Dukungan dari orang tua berpengaruh terhadap nilai akademis siswa, hal ini berbanding lurus, semakin tinggi dukungan orang tua pada anaknya, maka akan semakin bagus juga nilai akademis siswa. Selain itu, peran bimbingan belajar dalam mempengaruhi nilai akademis siswa juga berperan baik. Walaupun masih sedikit siswa yang mengikuti bimbingan belajar, mengikuti bimbingan belajar tetap terbukti efektif untuk meningkatkan nilai siswa. Kita bisa membuat model prediksi beradasakan pendukung yang ada, seeprti pada lampiran:
 
+y_tru: nilai GPA asli, dan Prediksi_RF: hasil prediksi
+
 ![image](https://github.com/user-attachments/assets/4bfc3785-3503-470f-ac0c-3219995e5f25)
 
 **---Ini adalah bagian akhir laporan---**
