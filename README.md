@@ -63,13 +63,21 @@ Rabie El Kharoua. "📚 Students Performance Dataset 📚". Tautan: https://www.
 Selain itu, untuk memahami persebaran data, dilakukan EDA dengan univariate analisys dan multivariate analisys. Univariate analisys dan multivariate analisys dilakukan secara bertahap dengan membagai data menjadi data kategorikal dan data numerikal. Dari dataset ini, data kategorikal diambil yaitu: 'Gender', 'Ethnicity', 'ParentalEducation', 'Tutoring', 'ParentalSupport', 'Extracurricular','Sports', 'Music', 'Volunteering', dan 'GradeClass'. Sementara data numerical yaitu: 'Age', 'StudyTimeWeekly', 'Absences', dan 'GPA'. 
 
 Setelah itu, dilakukan tahap visualisasi dengan diagram batang, untuk mengetahui persebaran jumlah datanya, berikut ini contoh visualisasi dalam kolom 'Ethnicity':
+
 ![image](https://github.com/user-attachments/assets/d973c9e3-2ed5-4e6f-8312-a4184a39732b)
+
 Sementara itu, data numerikal divisualisasikan seluruhnya seperti ini:
+
 ![image](https://github.com/user-attachments/assets/a7165f77-3e16-4ad5-a2a3-2c4231d07c51)
+
 Dalam memahami korelasi dan pengaruh tiap fitur, dilakukan visualisasi seperti di bawah ini pada data kategorikal yang sudah dibagi sebelumnya, misalnya ingin mengetahui perbandingan antara 'GPA' dan 'ParentalSupport':
+
 ![image](https://github.com/user-attachments/assets/47496f2d-0866-46db-b360-3e74dc08c4f1)
+
 Bagaimana dengan data numerikal? Dapat digunakan scatter plot, untuk mengetahui pola yang dibentuk antara hubungan 'GPA' dan faktor yang bertipe numerik lainnya, seperti contohnya di bawah ini:
+
 ![image](https://github.com/user-attachments/assets/8f3f2f44-727c-4638-823d-7c02949a95d5)
+
 Setelah melakukan tahap EDA, diketahui faktor-faktor apa yang berpengaruh terhadap 'GPA' dan tidak berpengaruh terhadap 'GPA". Faktor yang tidak berpengaruh terhadap 'GPA' akan dihapus, agar dataset lebih siap untuk masuk ke tahap data preparation.
 
 ## Data Preparation
