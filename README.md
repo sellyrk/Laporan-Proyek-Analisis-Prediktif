@@ -1,4 +1,4 @@
-# Laporan-Proyek-Predictive-Analisis
+# Laporan-Proyek-Predictive-Analytics
 
 # Laporan Proyek Machine Learning - Selly Rizkiyah
 
