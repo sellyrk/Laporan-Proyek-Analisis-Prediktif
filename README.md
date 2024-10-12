@@ -6,7 +6,9 @@
 
 ### Latar Belakang
    Pendidikan merupakan salah satu faktor penting dalam pengembangan sumber daya manusia yang berkualitas. Namun, salah satu tantangan yang dihadapi dalam dunia pendidikan adalah bagaimana mengidentifikasi dan memahami faktor-faktor yang mempengaruhi pencapaian akademis siswa. Seiring berkembangnya teknologi dan ilmu data, penggunaan analisis prediktif untuk memprediksi prestasi akademis siswa menjadi semakin relevan dan penting.
+   
    Dalam konteks ini, prediksi nilai akademis siswa dapat menjadi alat bantu yang sangat berguna bagi guru, orang tua, dan sekolah dalam membuat keputusan yang lebih efektif terkait intervensi pendidikan dan faktor terpenting dalam pendukung peningkatan nilai siswa. Dengan menganalisis berbagai faktor seperti waktu belajar mingguan, tingkat absensi, dukungan dari orang tua, serta keterlibatan siswa dalam kegiatan ekstrakurikuler, dapat diperoleh wawasan mendalam mengenai bagaimana setiap faktor tersebut berkontribusi terhadap prestasi akademik siswa.
+   
    Proyek ini berfokus pada penerapan teknik analisis prediktif untuk memprediksi nilai siswa (GPA) berdasarkan berbagai faktor pendukung. Hasil dari analisis ini diharapkan dapat membantu dalam mengidentifikasi siswa yang mungkin membutuhkan bantuan tambahan serta memberikan rekomendasi intervensi yang lebih tepat sasaran untuk meningkatkan hasil belajar mereka.
 
 ## Business Understanding
