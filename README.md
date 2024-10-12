@@ -28,12 +28,20 @@ Tujuan utama dari proyek analisis prediktif ini adalah untuk menjawab pertanyaan
 - Melihat peran bimbingan belajar terhadap nilai akademis siswa
 - Membuat model prediksi yang akurat untuk memprediksi GPA siswa berdasarkan data pendukung yang ada
 
+#### 3. Solution Statement 
+1. Memodelkan dengan K-Nearest Neighbors (KNN)**  
+   KNN akan digunakan sebagai model baseline untuk prediksi GPA siswa berdasarkan faktor-faktor seperti waktu belajar mingguan, ketidakhadiran, kegiatan ekstrakurikuler, olahraga, musik, dukungan orang tua, dan bimbingan belajar. KNN adalah algoritma yang intuitif dan mudah dipahami, namun memiliki beberapa kelemahan, seperti sensitivitas terhadap skala dan data berdimensi tinggi. Hyperparameter tuning akan dilakukan untuk menentukan jumlah tetangga terbaik (k) dan jarak metrik (misalnya, Euclidean). Metrik evaluasi yang akan digunakan adalah Mean Square Error (MSE).
+   
+2. Memodelkan dengan Random Forest 
+   Random Forest mampu menangani data yang kompleks, memiliki kemampuan untuk menangkap hubungan non-linear, dan menawarkan fitur penting seperti pemilihan fitur otomatis. Random Forest juga dapat digunakan untuk mengidentifikasi faktor mana yang paling berpengaruh terhadap GPA siswa, sehingga kita bisa mengetahui faktor-faktor yang benar-benar signifikan. Hyperparameter seperti jumlah pohon (n_estimators), kedalaman maksimum (max_depth), dan kontrol random generator (random_state) akan dioptimalkan menggunakan Grid Search atau Random Search. Metrik evaluasi yang akan digunakan adalah Mean Square Error (MSE).
+   
 ## Data Understanding
-Dataset ini memiliki 2.392 siswa SMA, yang berisi tentang id siswa dan 14 latar belakang siswa yang berbeda-beda. Demografi (usia, gender, etnis, pendidikan terakhir oranb tua), jam belajar mingguan, jumlah absen dalam setahun, status memakai tutor, dukungan orang tua, kegiatan ekstrakurikuler, kegiatan musik, kegiatan olahraga, kegiatan relawan, nilai, dan kelas. Target dari prediksi ini yaitu gpa predictive, atau prediksi nilai yang akan diraih.
+Dataset berisi 2.392 baris dan 15 kolom, dataset terdiri dari Id siswa, demografi siswa (usia, gender, etnis, pendidikan terakhir oranb tua), jam belajar mingguan, jumlah absen dalam setahun, status memakai tutor, dukungan orang tua, kegiatan ekstrakurikuler, kegiatan musik, kegiatan olahraga, kegiatan relawan, nilai, dan kelas. Target dari prediksi ini yaitu gpa predictive, atau prediksi nilai yang akan diraih. Kondisi data sudah bersih dari outliers dan missing values.
 
-sumber: https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset
+Referensi: 
+Rabie El Kharoua. "📚 Students Performance Dataset 📚". Tautan: https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset. Diakses pada 12 Oktober 2024
 
-### Variabel-variabel pada student performance dataset adalah sebagai berikut:
+### Variabel-variabel pada kolom-kolom student performance dataset adalah sebagai berikut:
 - StudentID : id tiap siswa dengan rentang 1001 - 3392
 - Age	: usia siswa dengan rentang 15 - 18 tahun
 - Gender : jenis kelamin siswa (0: laki-laki, 1: perempuan)
@@ -49,6 +57,16 @@ sumber: https://www.kaggle.com/datasets/rabieelkharoua/students-performance-data
 - Volunteering : partisipasi dalam kegiatan sukarelawan (0: tidak, 1: ya)
 - GPA	: nilai ipk dengan rentang 0.0 - 4.0
 - GradeClass : klasifikasi nilai siswa dari GPA (0: 'A' (IPK >= 3,5), 1: 'B' (3.0 <= IPK < 3.5), 2: 'C' (2.5 <= IPK < 3.0), 3: 'D' (2.0 <= IPK < 2.5), 4: 'F' (IPK < 2.0))
+
+Selain itu, untuk memahami persebaran data, dilakukan EDA dengan univariate analisys dan multivariate analisys. Univariate analisys dan multivariate analisys dilakukan secara bertahap dengan membagai data menjadi data kategorikal dan data numerikal. Dari dataset ini, data kategorikal diambil yaitu: 'Gender', 'Ethnicity', 'ParentalEducation', 'Tutoring', 'ParentalSupport', 'Extracurricular','Sports', 'Music', 'Volunteering', dan 'GradeClass'. Sementara data numerical yaitu: 'Age', 'StudyTimeWeekly', 'Absences', dan 'GPA'. Setelah itu, dilakukan tahap visualisasi dengan diagram batang, untuk mengetahui persebaran jumlah datanya, berikut ini contoh visualisasi dalam kolom 'Ethnicity':
+![image](https://github.com/user-attachments/assets/d973c9e3-2ed5-4e6f-8312-a4184a39732b)
+Sementara itu, data numerikal divisualisasikan seluruhnya seperti ini:
+![image](https://github.com/user-attachments/assets/a7165f77-3e16-4ad5-a2a3-2c4231d07c51)
+Dalam memahami korelasi dan pengaruh tiap fitur, dilakukan visualisasi seperti di bawah ini pada data kategorikal yang sudah dibagi sebelumnya, misalnya ingin mengetahui perbandingan antara 'GPA' dan 'ParentalSupport':
+![image](https://github.com/user-attachments/assets/47496f2d-0866-46db-b360-3e74dc08c4f1)
+Bagaimana dengan data numerikal? Dapat digunakan scatter plot, untuk mengetahui pola yang dibentuk antara hubungan 'GPA' dan faktor yang bertipe numerik lainnya, seperti contohnya di bawah ini:
+![image](https://github.com/user-attachments/assets/8f3f2f44-727c-4638-823d-7c02949a95d5)
+Setelah melakukan tahap EDA, diketahui faktor-faktor apa yang berpengaruh terhadap 'GPA' dan tidak berpengaruh terhadap 'GPA". Faktor yang tidak berpengaruh terhadap 'GPA' akan dihapus, agar dataset lebih siap untuk masuk ke tahap data preparation.
 
 ## Data Preparation
 ### Teknik Data Preparation yang Digunakan
